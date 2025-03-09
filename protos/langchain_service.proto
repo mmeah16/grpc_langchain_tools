@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service LangChain {
+    rpc processQuery (QueryRequest) returns (QueryResponse);
+}
+
+message QueryRequest {
+    string input_text = 1; 
+}
+
+message QueryResponse {
+    string output_text = 1; 
+}
+
